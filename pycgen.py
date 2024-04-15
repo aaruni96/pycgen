@@ -181,6 +181,7 @@ class pc:
         #DEX Skills
         self.SMODAcrobatics = self.DEXMOD + (PROFAcrobatics * self.PROFBonus)
         self.SMODSleightofhand = self.DEXMOD + (PROFSleightofhand * self.PROFBonus)
+        self.SMODStealth = self.DEXMOD + (PROFStealth * self.PROFBonus)
         
         #CON skills
         #none!
@@ -205,10 +206,10 @@ class pc:
         self.SMODPersuasion = self.CHAMOD + (PROFPersuasion * self.PROFBonus)
 
         #passive perception
-        self.Perception = WIS + self.WISMOD + (PROFWIS * self.PROFBonus)
+        self.Perception = 10 + self.WISMOD + (PROFPerception * self.PROFBonus)
 
         self.PCInitiative = self.DEXMOD
-        self.PCAC = self.DEXMOD + (PROFDEX * self.PROFBonus)
+        self.PCAC = self.PCDEX + self.DEXMOD + (PROFDEX * self.PROFBonus)
 
 
 def write(character:pc):
