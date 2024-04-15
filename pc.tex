@@ -1,0 +1,181 @@
+\documentclass[letterpaper,openany,oneside,twocolumn]{book}
+
+\usepackage[justified]{dnd}
+\usepackage{ifthen}
+\usepackage{calc}
+
+\usepackage{dndtemplate}
+\usepackage{bookmark}
+
+\setlength\oddsidemargin{\dimexpr(\paperwidth-\textwidth)/2 - 1in\relax}
+\setlength\evensidemargin{\oddsidemargin}
+
+% Headline
+
+\Speed{30}
+\MaxHitPoints{15}
+\CurrentHitPoints{15}
+\MaxHitDice{1d12}
+\CurrentHitDice{}
+
+\CP{0}
+\SP{0}
+\GP{10}
+\EP{0}
+\PP{0}
+
+
+\AddWeapon{Greataxe}{0}{1d12/s}
+\AddWeapon{HandAxe}{0}{1d6/s}
+\AddWeapon{HandAxe OH}{0}{1d6/s}
+\AddWeapon{Javelin}{}{1d6/p}
+\AddWeapon{Javelin OH}{}{1d6/p}
+\AddWeapon{Unarmed}{}{1/b}
+
+
+\AttacksAdditional{\textbf{Armor}: Unarmored \\
+\textbf{Shield}: No Shield \\
+}
+
+\OtherProficienciesLanguages{
+\begin{tabular}{l l}
+     \textbf{Languages:} & Common, Orc  \\
+     \textbf{Weapons:} & Simple Weapons, Martial Weapons \\
+     \textbf{Armor:} & Light Armor, Medium Armor, Shields\\
+     \textbf{Others:} & Brewer's Supplies, Land Vehicles
+\end{tabular}
+ }
+
+\Equipment{
+Backpack, Bedroll, Mess Kit, Tinderbox, 10 torches, 10 days of rations, waterskin, 50 feet of hempen rope, brewer's supplies, shovel, iron pot, common clothes, belt pouch, Greataxe, 2 Handaxes, 4 Javelins\\
+\footnotesize{
+\textbf{Weight:} 99 lb \textbf{Capacity:} 270 lb
+}}
+
+\PersonalityTraits{I have a strong sense of fair play and always try to find the most equitable solution to arguments.}
+
+\Ideals{Sincerity. There's no good in pretending to be something I'm not. (Neutral)}
+
+\Bonds{I protect those who cannot protect themselves.}
+
+\Flaws{I have a taste for brawling and am compelled to find a sparring partner, willing or otherwise.}
+
+\FeaturesTraits{
+\textbf{Features} \\
+Darkvision\\
+Menacing\\
+Relentless Endurance\\
+Savage Attacks\\
+Rage\\
+Unarmored Defense\\
+Rustic Hospitality\\
+}
+
+
+% Appearance
+
+\Age{27}
+\Height{6'4}
+\Weight{250lbs}
+\Eyes{Green}
+\Skin{Green}
+\Hair{Brown}
+
+% background
+
+\CharacterAppearance{\includegraphics[width=5.75cm]{characters/images/rogal.jpg}
+
+
+}
+\AdditionalFeaturesAndTraits{ to be fleshedout
+}
+
+\Characterbackground{I was quite popular as the strongman nice kind guy  in the lovely farming village of <insert village name>, until one day under the threat of some villians, the local lord drafted a defensive force of local militia and men at arms.
+
+after showing extraordinary valor in battle, and saving the village, the local lord equipped me well and sent me on a quest to journey through potentially hostile lands to the local monarch and deliver the news of hostile actors. Along the way, adventure transpires.
+
+to-be-fleshed-out
+}
+
+\Treasure{
+My father's hand axe which I always keep with me. It has gotten me out of many tough situations.
+}
+
+\AlliesAndOrganizations{
+}
+
+\OrganizationName{\centering{Imperial Fists}
+}
+
+
+%Magic
+
+\SpellcastingClass{Cleric 2}
+\SpellcastingAbility{WIS}
+\SpellSaveDC{12}
+\SpellAttackBonus{+4}
+
+\FirstLevelSpellSlotsTotal{3}
+
+\CantripSlotA{Guidance}
+\CantripSlotB{Sacred Flame}
+\CantripSlotC{Thaumaturgy}
+\FirstLevelSpellSlotA{Bane}
+\FirstLevelSpellSlotAPrepared{False}
+\FirstLevelSpellSlotB{Bless}
+\FirstLevelSpellSlotBPrepared{True}
+\FirstLevelSpellSlotC{Charm Person}
+\FirstLevelSpellSlotCPrepared{True}
+\FirstLevelSpellSlotD{Command}
+\FirstLevelSpellSlotDPrepared{False}
+\FirstLevelSpellSlotE{Create Or Destroy Water}
+\FirstLevelSpellSlotEPrepared{False}
+\FirstLevelSpellSlotF{Cure Wounds}
+\FirstLevelSpellSlotFPrepared{True}
+\FirstLevelSpellSlotG{Detect Evil And Good}
+\FirstLevelSpellSlotGPrepared{False}
+\FirstLevelSpellSlotH{Detect Magic}
+\FirstLevelSpellSlotHPrepared{False}
+\FirstLevelSpellSlotI{Detect Poison And Disease}
+\FirstLevelSpellSlotIPrepared{False}
+\FirstLevelSpellSlotJ{Disguise Self}
+\FirstLevelSpellSlotJPrepared{True}
+\FirstLevelSpellSlotK{Guiding Bolt}
+\FirstLevelSpellSlotKPrepared{True}
+\FirstLevelSpellSlotL{Healing Word}
+\FirstLevelSpellSlotLPrepared{False}
+\FirstLevelSpellSlotM{Inflict Wounds}
+\FirstLevelSpellSlotMPrepared{False}
+\FirstLevelSpellSlotN{Protection From Evil And Good}
+\FirstLevelSpellSlotNPrepared{False}
+\FirstLevelSpellSlotO{Purify Food And Drink}
+\FirstLevelSpellSlotOPrepared{False}
+\FirstLevelSpellSlotP{Sanctuary}
+\FirstLevelSpellSlotPPrepared{False}
+\FirstLevelSpellSlotQ{Shield Of Faith}
+\FirstLevelSpellSlotQPrepared{False}
+
+\newcommand{\spellsheetchoice}{\renderhalfspellsheet}
+
+
+
+\begin{document}
+\newgeometry{left=0cm,right=0cm,top=0cm,bottom=0cm}
+\onecolumn
+
+
+% CHARACTER PAGE
+\pdfbookmark[0]{Character Sheet}{Character Sheet}
+\rendercharactersheet
+
+% BACKSTORY PAGE
+\pdfbookmark[0]{Background Sheet}{Background Sheet}
+\renderbackgroundsheet
+
+
+% SPELLCASTING PAGE
+\pdfbookmark[0]{Spellcasting Sheet}{Spellcasting Sheet}
+\spellsheetchoice
+
+
+\end{document}
