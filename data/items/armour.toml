@@ -1,0 +1,8 @@
+[scale_mail]
+ACName = "Scale Mail"
+ACType = "Medium armour"
+ACCost = 500000
+ACWeight = 45
+AC = 14
+ACMaxDex = 2
+
