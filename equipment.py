@@ -44,7 +44,8 @@ def main():
 
     #main loop
 
-    outfile = open("data/items/armour.toml", 'w')
+    filename = "data/items/armour.toml"
+    outfile = open(filename, 'a')
     while True:
         name = input("Enter name of armour:\n>\t")
         atype = input("Enter type of armour:\n>\t")
@@ -55,7 +56,7 @@ def main():
         item = armour(name, atype, cost, weight, ac, md)
         WriteToLib(outfile, item)
         outfile.flush()
-        print(f"Written {name} to {outfile}!")
+        print(f"Written {name} to {filename}!")
         yn = input("Add more? (y/N:\t)").lower()
         if not yn=='y':
             break

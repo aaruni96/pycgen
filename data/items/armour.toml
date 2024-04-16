@@ -1,6 +1,14 @@
+[leather_armor]
+ACName = "Leather Armor"
+ACType = "Light armor"
+ACCost = 100000
+ACWeight = 10
+AC = 11
+ACMaxDex = 6
+
 [scale_mail]
 ACName = "Scale Mail"
-ACType = "Medium armour"
+ACType = "Medium armor"
 ACCost = 500000
 ACWeight = 45
 AC = 14
